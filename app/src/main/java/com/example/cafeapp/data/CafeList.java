@@ -29,7 +29,7 @@ public class CafeList implements Iterable<Cafe> {
 
     public boolean hasLargerScore(int score) {
         for (Cafe cafe : cafes) {
-            if (cafe.getScore() > score) {
+            if (cafe.getPreference() > score) {
                 return true;
             }
         }
@@ -39,7 +39,7 @@ public class CafeList implements Iterable<Cafe> {
     public Cafe getLargestScore() {
         Cafe largest = null;
         for (Cafe cafe : cafes) {
-            largest = largest == null || cafe.getScore() > largest.getScore() ? cafe : largest;
+            largest = largest == null || cafe.getPreference() > largest.getPreference() ? cafe : largest;
         }
         return largest;
     }
@@ -50,7 +50,7 @@ public class CafeList implements Iterable<Cafe> {
         int score = 0;
         Cafe best = null;
         for (Cafe c : cafes) {
-            best = (c.getScore() * 0.8 + c.getNumVisited() * 0.2) > score ? c : best;
+            best = (c.getPreference() * 0.8 + c.getNumVisited() * 0.2) > score ? c : best;
         }
         return best;
     }

@@ -8,7 +8,7 @@ import java.util.Objects;
 public class Cafe {
 
     private String name;
-    private int score;
+    private int preference;
     private String location;
     private int numVisited;
     private Bitmap defaultImage;
@@ -27,8 +27,8 @@ public class Cafe {
         this.name = name;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void setPreference(int preference) {
+        this.preference = preference;
     }
 
     public void setLocation(String location) {
@@ -39,8 +39,8 @@ public class Cafe {
         return name;
     }
 
-    public int getScore() {
-        return score;
+    public int getPreference() {
+        return preference;
     }
 
     public String getLocation() {
